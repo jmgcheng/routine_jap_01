@@ -27,6 +27,10 @@ const katakanaDictionary = [
     {'char': 'ン', 'romaji': 'n'}
 ];
 
+// const etcDictionary = [
+//     {'char': '見', 'romaji': 'mi'}, 
+// ];
+
 // Sample Game Card Data
 let gameCardsHiragana1 = [{'jap': 'あ', 'eng': 'a'}, {'jap': 'い', 'eng': 'i'}, {'jap': 'う', 'eng': 'u'}, {'jap': 'え', 'eng': 'e'}, {'jap': 'お', 'eng': 'o'}, ]
 let gameCardsHiragana2 = [{'jap': 'か', 'eng': 'ka'}, {'jap': 'き', 'eng': 'ki'}, {'jap': 'く', 'eng': 'ku'}, {'jap': 'け', 'eng': 'ke'}, {'jap': 'こ', 'eng': 'ko'}, ]
@@ -53,19 +57,469 @@ let gameCardsKatakana10 = [{'jap': 'ワ', 'eng': 'wa'}, 	{'jap': 'ヲ', 'eng': '
 let gameCardsKatakana11 = [{'jap': 'ン', 'eng': 'n'}]
 
 
-let gameCardsGreetings = [
-    { "jap": "こんにちは", "eng": "Hello" },
-    { "jap": "さようなら", "eng": "Goodbye" }
+let gameCardsPt1 = [
+    {'jap': 'こんばんは', 'eng': 'tonight, good evening, this evening'}, 	
+    {'jap': 'なおみ', 'eng': 'Naomi'}, 	
+    {'jap': 'はな', 'eng': 'flowers, flower, Hana'}, 	
+    {'jap': 'どうぞよろしく', 'eng': 'nice to meet you'}, 	
+    {'jap': 'こんにちは', 'eng': 'hello, hi'}, 	
+    {'jap': 'けん', 'eng': 'Ken, ticket'}, 	
+    {'jap': 'がくせい', 'eng': 'student, students'}, 	
+    {'jap': 'ひと', 'eng': 'person, people'}, 	
+    {'jap': 'かっこいい', 'eng': 'cool, good-looking, stylish'}, 	
+    {'jap': 'べんごし', 'eng': 'lawyer, lawyers'}, 	
+    {'jap': 'やさしい', 'eng': 'kind, easy, nice'}, 	
+    {'jap': 'せんせい', 'eng': 'teacher, Professor, teachers'}, 	
+    {'jap': 'いしゃ', 'eng': 'doctor, doctors'}, 	
+    {'jap': 'です', 'eng': "there is, it's, I'm"}, 	
+    {'jap': 'と', 'eng': 'and, that, door'}, 	
+    {'jap': 'みず', 'eng': 'water'}, 	
+    {'jap': 'ごはん', 'eng': 'rice, meal, meals'}, 	
+    {'jap': 'すし', 'eng': 'sushi'}, 	
+    {'jap': 'ください', 'eng': 'please'}, 	
+    {'jap': 'おちゃ', 'eng': 'green teas, green tea, tea'}, 
 ];
 
-let gameCardsTravel = [
-    { "jap": "えき", "eng": "Station" },
-    { "jap": "ひこうき", "eng": "Airplane" }
+let gameCardsPt2 = [
+    {'jap': 'ブラジルじん', 'eng': "Brazilian"},	
+    {'jap': 'イギリスじん', 'eng': "British"},	
+    {'jap': 'ブラジル', 'eng': "Brazil"},	
+    {'jap': 'イギリス', 'eng': "Britain, the United Kingdom, British"},	
+    {'jap': 'にほんじん', 'eng': "Japanese"},	
+    {'jap': 'カナダ', 'eng': "Canada"},	
+    {'jap': 'アメリカじん', 'eng': "American"},	
+    {'jap': 'カナダじん', 'eng': "Canadian"},	
+    {'jap': 'アメリカ', 'eng': "America, the USA, the US"},	
+    {'jap': 'ちいさい', 'eng': "small, little"},	
+    {'jap': 'にほん', 'eng': "Japan"},	
+    {'jap': 'おおきい', 'eng': "big, large"},	
+    {'jap': 'か', 'eng': "or, is it?, that"},	
+    {'jap': 'いいえ', 'eng': "no"},	
+    {'jap': 'はい', 'eng': "yes"},	
+    {'jap': 'ケーキ', 'eng': "cake"},	
+    {'jap': 'ピザ', 'eng': "pizza"},	
+    {'jap': 'それ', 'eng': "that (one), it, that"},	
+    {'jap': 'これ', 'eng': "this (one), these, this"},	
+    {'jap': 'ラーメン', 'eng': "ramen"},	
+    {'jap': 'おいしい', 'eng': "good, delicious, tasty"},	
+    {'jap': 'は', 'eng': "is, with, regarding"},	
+    {'jap': 'カレー', 'eng': "curry"},	
+    {'jap': 'またあした', 'eng': "see you tomorrow"},	
+    {'jap': 'じゃあね', 'eng': "bye"},	
+    {'jap': 'さん', 'eng': "Mr., Miss, Mrs."},
 ];
 
-let gameCardsEmergency = [
-    { "jap": "たすけて", "eng": "Help!" },
-    { "jap": "けいさつ", "eng": "Police" }
+let gameCardsPt3 = [
+    {'jap': 'その', 'eng': "the, that, its"},	
+    {'jap': 'かわいい', 'eng': "cuter, cute, pretty"},	
+    {'jap': 'あかるい', 'eng': "bright, cheerful, well-lit"},	
+    {'jap': 'たなか', 'eng': "Tanaka"},	
+    {'jap': 'この', 'eng': "this, these"},	
+    {'jap': 'なかやま', 'eng': "Nakayama"},	
+    {'jap': 'それら', 'eng': "they, them, those"},	
+    {'jap': 'これら', 'eng': "these"},	
+    {'jap': 'くつ', 'eng': "shoes, shoe"},	
+    {'jap': 'しろい', 'eng': "white"},	
+    {'jap': 'コート', 'eng': "coat"},	
+    {'jap': 'あかい', 'eng': "red"},	
+    {'jap': 'わたしの', 'eng': "my, mine"},	
+    {'jap': 'かさ', 'eng': "umbrella, umbrellas"},	
+    {'jap': 'ぼうし', 'eng': "hat, hats"},	
+    {'jap': 'そこ', 'eng': "there"},	
+    {'jap': 'だいがく', 'eng': "university, college"},	
+    {'jap': 'えき', 'eng': "station, train station, stations"},	
+    {'jap': 'デパート', 'eng': "department store"},	
+    {'jap': 'ここ', 'eng': "here"},	
+    {'jap': 'バスてい', 'eng': "bus stop"},	
+    {'jap': 'ホテル', 'eng': "hotel"},	
+    {'jap': 'コンビニ', 'eng': "convenience store"},	
+    {'jap': 'どこ', 'eng': "where"},
+];
+
+let gameCardsPt4 = [
+    {'jap': 'の', 'eng': "for, 's, one"},	
+    {'jap': 'スマホ', 'eng': "smartphone"},	
+    {'jap': 'ちず', 'eng': "map"},	
+    {'jap': 'きっぷ', 'eng': "ticket"},	
+    {'jap': 'じゃないです', 'eng': "is not, we're not, aren't"},	
+    {'jap': 'ちかてつ', 'eng': "subway"},	
+    {'jap': 'くうこう', 'eng': "airport"},	
+    {'jap': 'はん', 'eng': "thirty"},	
+    {'jap': 'すみません', 'eng': "excuse me"},	
+    {'jap': 'ごろ', 'eng': "around, about"},	
+    {'jap': 'いま', 'eng': "now, current"},	
+    {'jap': '一', 'eng': "one, an, a"},	
+    {'jap': '二', 'eng': "two, 2"},	
+    {'jap': 'なんじ', 'eng': "what time"},	
+    {'jap': '三', 'eng': "3, three, third"},	
+    {'jap': 'じ', 'eng': "o'clock"},	
+    {'jap': 'に', 'eng': "to, in, as (a)"},	
+    {'jap': 'いち', 'eng': "one, an"},	
+    {'jap': 'やまぐち', 'eng': "Yamaguchi"},	
+    {'jap': 'おもしろい', 'eng': "interesting, fun, funny"},
+];
+
+let gameCardsPt5 = [
+    {'jap': 'まち', 'eng': "town, wait, city"},	
+    {'jap': 'とても', 'eng': "very"},	
+    {'jap': 'きれい', 'eng': "clean"},	
+    {'jap': 'しずか', 'eng': "quiet"},	
+    {'jap': 'トロント', 'eng': "Toronto"},	
+    {'jap': 'にぎやか', 'eng': "lively"},	
+    {'jap': 'とし', 'eng': "years, cities, city"},	
+    {'jap': 'どう', 'eng': "how (about), what, how"},	
+    {'jap': '日本', 'eng': "Japan, Japanese"},	
+    {'jap': 'おおさか', 'eng': "Osaka"},	
+    {'jap': '京都', 'eng': "Kyoto"},	
+    {'jap': 'にすんでいます', 'eng': "is living"},	
+    {'jap': 'ニューヨーク', 'eng': "New York"},	
+    {'jap': 'も', 'eng': "even, any, also"},	
+    {'jap': 'しゅっしん', 'eng': "from, origin, hometown"},	
+    {'jap': '東京', 'eng': "Tokyo"},	
+    {'jap': '私', 'eng': "I"},	
+    {'jap': 'ようこそ', 'eng': "welcome"},	
+    {'jap': 'おはようございます', 'eng': "good morning"},	
+    {'jap': 'はじめまして', 'eng': "nice to meet you, how do you do"},	
+    {'jap': 'おなまえは', 'eng': "what's your name"},	
+    {'jap': 'かばん', 'eng': "bag"},	
+    {'jap': '中山', 'eng': "Nakayama"},	
+    {'jap': '田中', 'eng': "Tanaka"},	
+    {'jap': '山口', 'eng': "Yamaguchi"},	
+    {'jap': 'パスポート', 'eng': "passport"}, 
+];
+
+let gameCardsPt6 = [
+    {'jap': 'おっと', 'eng': "my husband"},	
+    {'jap': '七', 'eng': "7, seven, seventh"},	
+    {'jap': 'あたまがいい', 'eng': "smart"},	
+    {'jap': 'むすこ', 'eng': "my son"},	
+    {'jap': 'おしゃれ', 'eng': "fashionable, stylish, well-dressed"},	
+    {'jap': 'むすめ', 'eng': "my daughter"},	
+    {'jap': '六', 'eng': "six"},	
+    {'jap': 'つま', 'eng': "my wife"},	
+    {'jap': 'だいがくせい', 'eng': "college student"},	
+    {'jap': 'ゆうめい', 'eng': "famous"},	
+    {'jap': 'かんごし', 'eng': "nurse"},	
+    {'jap': 'おとうと', 'eng': "my younger brother"},	
+    {'jap': 'うるさい', 'eng': "noisy"},	
+    {'jap': '五', 'eng': "5, five"},	
+    {'jap': 'あに', 'eng': "my older brother"},	
+    {'jap': 'かいしゃいん', 'eng': "office worker"},	
+    {'jap': 'あね', 'eng': "my older sister"},	
+    {'jap': '四', 'eng': "four"},	
+    {'jap': 'いもうと', 'eng': "my younger sister"},	
+    {'jap': 'さい', 'eng': "years old"},	
+    {'jap': 'いそがしい', 'eng': "busy"},	
+    {'jap': 'エンジニア', 'eng': "engineer"},	
+    {'jap': '父', 'eng': "dad"},	
+    {'jap': 'かぞく', 'eng': "family"},	
+    {'jap': '母', 'eng': "mom, mother, my mom"},
+];
+
+let gameCardsPt7 = [
+    {'jap': 'ばんごはん', 'eng': "dinner"},	
+    {'jap': 'まいばん', 'eng': "every night"},	
+    {'jap': '九時', 'eng': "nine o'clock"},	
+    {'jap': '半', 'eng': "thirty"},	
+    {'jap': '八', 'eng': "eight"},	
+    {'jap': 'べんとう', 'eng': "boxed lunch"},	
+    {'jap': 'ひるごはん', 'eng': "lunch"},	
+    {'jap': '十二', 'eng': "twelve"},	
+    {'jap': '十', 'eng': "ten"},	
+    {'jap': '十一', 'eng': "eleven"},	
+    {'jap': 'あさごはん', 'eng': "breakfast"},	
+    {'jap': '七時', 'eng': "seven o'clock"},	
+    {'jap': '時', 'eng': "o'clock"},	
+    {'jap': 'コーヒー', 'eng': "coffee"},	
+    {'jap': 'まいあさ', 'eng': "every morning"},	
+    {'jap': 'のみます', 'eng': "drink, drinks, (will) drink"},	
+    {'jap': 'ジュース', 'eng': "juice"},	
+    {'jap': 'まいにち', 'eng': "every day"},	
+    {'jap': 'パン', 'eng': "bread"},	
+    {'jap': 'サンドイッチ', 'eng': "sandwich"},	
+    {'jap': 'たべます', 'eng': "eat, eats"},	
+    {'jap': 'Jポップ', 'eng': "J-pop"},	
+    {'jap': 'まんが', 'eng': "manga"},	
+    {'jap': 'アニメ', 'eng': "anime"},	
+    {'jap': 'やきゅう', 'eng': "baseball"},	
+    {'jap': 'ざっし', 'eng': "magazines"},	
+    {'jap': '本', 'eng': "books"},	
+    {'jap': '読みます', 'eng': "read, will read, reads"},	
+    {'jap': 'ニュース', 'eng': "news"},	
+    {'jap': 'おんがく', 'eng': "music"},	
+    {'jap': 'ロック', 'eng': "rock"},	
+    {'jap': 'ききます', 'eng': "listen, listens, ask"},	
+    {'jap': 'サッカー', 'eng': "soccer"},	
+    {'jap': 'ときどき', 'eng': "sometimes"},	
+    {'jap': 'します', 'eng': "makes, are doing, make"},	
+    {'jap': 'バスケットボール', 'eng': "basketball"},	
+    {'jap': 'を', 'eng': "through, with, for"},	
+    {'jap': 'よく', 'eng': "often"},	
+    {'jap': 'えいが', 'eng': "movies"},	
+    {'jap': 'テレビ', 'eng': "TV"},	
+    {'jap': '見ます', 'eng': "watch, will watch, watches"},
+];
+
+let gameCardsPt8 = [
+    {'jap': 'アイスコーヒー', 'eng': "iced coffee"},	
+    {'jap': 'アイスクリーム', 'eng': "ice cream, ice creams"},	
+    {'jap': 'こうちゃ', 'eng': "black teas, black tea, tea"},	
+    {'jap': '小さい', 'eng': "small, little"},	
+    {'jap': 'すこし', 'eng': "a bit"},	
+    {'jap': 'みそしる', 'eng': "miso soup"},	
+    {'jap': 'サラダ', 'eng': "salad, salads"},	
+    {'jap': 'そば', 'eng': "soba"},	
+    {'jap': '大きい', 'eng': "big"},	
+    {'jap': 'おにぎり', 'eng': "rice balls, rice ball, onigiri"},	
+    {'jap': 'よっつ', 'eng': "four"},	
+    {'jap': 'ええと', 'eng': "um"},	
+    {'jap': 'みっつ', 'eng': "three"},	
+    {'jap': 'じゃあ', 'eng': "well then, well, see you"},	
+    {'jap': 'ふたつ', 'eng': "two"},	
+    {'jap': 'あ', 'eng': "ah, oh"},	
+    {'jap': 'ひとつ', 'eng': "one"},	
+    {'jap': '水', 'eng': "water, waters"},	
+    {'jap': 'レストラン', 'eng': "restaurant"},	
+    {'jap': 'ていしょく', 'eng': "meal set, meal sets"},	
+    {'jap': 'うどん', 'eng': "udon"},	
+    {'jap': 'てんぷら', 'eng': "tempura"},	
+    {'jap': 'ジャケット', 'eng': "jacket"},	
+    {'jap': 'たかい', 'eng': "expensive, big, tall"},	
+    {'jap': 'くろい', 'eng': "black"},	
+    {'jap': 'みせ', 'eng': "store"},	
+    {'jap': 'ありがとうございます', 'eng': "thank you"},	
+    {'jap': '千', 'eng': "thousand"},	
+    {'jap': 'いくら', 'eng': "how much"},	
+    {'jap': 'ネクタイ', 'eng': "tie, necktie, ties"},	
+    {'jap': 'えん', 'eng': "yen"},	
+    {'jap': 'やすい', 'eng': "cheap, inexpensive"},	
+    {'jap': '百', 'eng': "hundred"},	
+    {'jap': 'あの', 'eng': "those, ah, that (over there)"},	
+    {'jap': 'あおい', 'eng': "blue"},	
+    {'jap': 'いい', 'eng': "good, like, well"},	
+    {'jap': 'ドレス', 'eng': "dress"},	
+    {'jap': 'すてき', 'eng': "lovely, nice, cute"},	
+    {'jap': 'がほしいです', 'eng': "want"},	
+    {'jap': 'スカート', 'eng': "skirt"},	
+    {'jap': 'Tシャツ', 'eng': "t-shirt"},	
+    {'jap': '新しい', 'eng': "new, newer"},	
+    {'jap': 'ね', 'eng': "isn't it?"},	
+    {'jap': 'ふく', 'eng': "clothes"},	
+    {'jap': 'ダサい', 'eng': "hideous"},	
+    {'jap': 'はちょっと', 'eng': "I don't really like, doesn't work very well, kind of"},	
+    {'jap': 'さいふ', 'eng': "wallet"},	
+    {'jap': '古い', 'eng': "old"},
+];
+
+let gameCardsPt9 = [
+    {'jap': 'いっかい', 'eng': "first floor"},	
+    {'jap': 'ホーム', 'eng': "platform"},	
+    {'jap': 'どうが', 'eng': "video"},	
+    {'jap': 'じゅうどう', 'eng': "judo"},	
+    {'jap': 'テニス', 'eng': "tennis"},	
+    {'jap': '話します', 'eng': "speaks, speak, tells"},	
+    {'jap': '日曜日', 'eng': "Sunday"},	
+    {'jap': 'ゲーム', 'eng': "video games"},	
+    {'jap': 'からて', 'eng': "karate"},	
+    {'jap': 'でかけます', 'eng': "go out, am going to go out"},	
+    {'jap': '土曜日', 'eng': "Saturday, Saturdays"},	
+    {'jap': '買います', 'eng': "will buy"},	
+    {'jap': 'スポーツ', 'eng': "sports"},	
+    {'jap': 'ヨガ', 'eng': "yoga"},	
+    {'jap': 'ともだち', 'eng': "friend, friends"},	
+    {'jap': 'ドラマ', 'eng': "drama"},	
+    {'jap': 'あそびます', 'eng': "hang out, hangs out, (I) will play"},	
+    {'jap': 'およぎます', 'eng': "swim, will swim, swims"},	
+    {'jap': 'しゅうまつ', 'eng': "weekend"},	
+    {'jap': 'ひとりで', 'eng': "by myself, by herself, alone"},
+];
+
+let gameCardsPt10 = [
+    {'jap': 'でぐち', 'eng': "exit"}, 	
+    {'jap': 'じはんき', 'eng': "vending machines, vending machine"}, 	
+    {'jap': 'コインロッカー', 'eng': "storage lockers"}, 	
+    {'jap': 'ちかい', 'eng': "close"}, 	
+    {'jap': 'カフェ', 'eng': "cafe"}, 	
+    {'jap': 'にかい', 'eng': "the second floor, two"}, 	
+    {'jap': 'かいだん', 'eng': "stairs"}, 	
+    {'jap': 'コンセント', 'eng': "outlet"}, 	
+    {'jap': 'とおい', 'eng': "far"}, 	
+    {'jap': 'でんわ', 'eng': "phone"}, 	
+    {'jap': 'ちか', 'eng': "underground level"}, 	
+    {'jap': 'タクシー', 'eng': "taxi"}, 	
+    {'jap': 'エレベーター', 'eng': "elevator"}, 	
+    {'jap': 'おてあらい', 'eng': "restroom"}, 	
+    {'jap': 'wifi', 'eng': "wifi"}, 	
+    {'jap': 'ありません', 'eng': "there are no, (it) is not, has nothing"}, 	
+    {'jap': 'ゴミばこ', 'eng': "trash can"}, 	
+    {'jap': 'のりかえ', 'eng': "transfer"}, 	
+    {'jap': 'あそこ', 'eng': "over there"}, 	
+    {'jap': 'かいさつ', 'eng': "ticket gate"}, 	
+    {'jap': 'ありますか', 'eng': "is (there), is (it), are (there)"},     
+];
+
+let gameCardsPt11 = [
+    {'jap': 'はしります', 'eng': "runs, run"},	
+    {'jap': '飲みます', 'eng': "will have, drink, having"},	
+    {'jap': 'パスタ', 'eng': "pasta"},	
+    {'jap': 'ねます', 'eng': "sleep, go to sleep, will go to sleep"},	
+    {'jap': 'シャワーをあびます', 'eng': "take a shower"},	
+    {'jap': 'メールを読みます', 'eng': "check emails"},	
+    {'jap': 'あした', 'eng': "tomorrow"},	
+    {'jap': 'らいしゅう', 'eng': "next week"},	
+    {'jap': 'バレーボール', 'eng': "volleyball"},	
+    {'jap': 'まいしゅう', 'eng': "every week"},	
+    {'jap': '四時', 'eng': "four o'clock"},	
+    {'jap': 'つくります', 'eng': "make"},	
+    {'jap': '食べます', 'eng': "eat, am going to eat, will eat"},	
+    {'jap': '何時に', 'eng': "(at) what time"},	
+    {'jap': 'おきます', 'eng': "get up, going to wake up, wake up"},	
+    {'jap': '新聞', 'eng': "newspaper"},	
+    {'jap': 'ラジオ', 'eng': "radio"},	
+    {'jap': '何時', 'eng': "when, what time"},	
+    {'jap': 'いつも', 'eng': "always, all the time, never"},
+];
+
+let gameCardsPt12 = [
+    {'jap': 'れんあい', 'eng': "romance"}, 	
+    {'jap': 'コメディ', 'eng': "comedy"}, 	
+    {'jap': 'ほんとうですか', 'eng': "really"}, 	
+    {'jap': 'アクション', 'eng': "action"}, 	
+    {'jap': 'アメリカの', 'eng': "... of the US, American, ... of the United States"}, 	
+    {'jap': 'どんな', 'eng': "any, what kind of, what (sort of)"}, 	
+    {'jap': 'ファンタジー', 'eng': "fantasy"}, 	
+    {'jap': 'ホラー', 'eng': "horror"}, 	
+    {'jap': 'がすきですか', 'eng': "do you like"}, 	
+    {'jap': 'しゅみはありますか', 'eng': "do you have a hobby"}, 	
+    {'jap': 'ミステリー', 'eng': "mystery"}, 	
+    {'jap': 'Kポップ', 'eng': "K-pop"}, 	
+    {'jap': '日本の', 'eng': "Japan's, of Japan, Japanese"}, 	
+    {'jap': 'がすきです', 'eng': "like"}, 	
+    {'jap': 'ベトナム', 'eng': "Vietnam"}, 	
+    {'jap': 'かんこく', 'eng': "Korea, korean"}, 	
+    {'jap': 'かのじょ', 'eng': "she, girlfriend, her"}, 	
+    {'jap': 'ちゅうごく', 'eng': "China"}, 	
+    {'jap': 'さんは', 'eng': "Mr./Ms."}, 	
+    {'jap': 'かれし', 'eng': "boyfriend"}, 	
+    {'jap': 'アンドリュー', 'eng': "Andrew"}, 	
+    {'jap': 'と言います', 'eng': "tell, say, says"}, 	
+    {'jap': 'エリカ', 'eng': "Erica, Erika"}, 	
+    {'jap': '言います', 'eng': "tell, tells, say"}, 	
+    {'jap': 'こちら', 'eng': "this, these, (over) here"}, 	
+    {'jap': 'ダニエル', 'eng': "Daniel"}, 
+];
+
+let gameCardsPt13 = [
+    {'jap': 'つくえ', 'eng': "desk"}, 	
+    {'jap': 'せんたくき', 'eng': "washing machine"}, 	
+    {'jap': 'れいぞうこ', 'eng': "fridge"}, 	
+    {'jap': 'いす', 'eng': "chair, chairs"}, 	
+    {'jap': 'テーブル', 'eng': "table, tables"}, 	
+    {'jap': 'でんしレンジ', 'eng': "microwave"}, 	
+    {'jap': 'ふとん', 'eng': "futon, futons"}, 	
+    {'jap': 'たぶん', 'eng': "probably"}, 	
+    {'jap': 'ほんだな', 'eng': "bookshelf"}, 	
+    {'jap': 'シャワー', 'eng': "shower, showers"}, 	
+    {'jap': 'そうじき', 'eng': "vacuum cleaner"}, 	
+    {'jap': 'エアコン', 'eng': "air conditioning, air conditioners, air conditioner"}, 	
+    {'jap': 'ベッド', 'eng': "bed, beds"}, 	
+    {'jap': 'せまい', 'eng': "cramped"}, 	
+    {'jap': 'リビング', 'eng': "living room"}, 	
+    {'jap': 'キッチン', 'eng': "kitchen"}, 	
+    {'jap': 'があります', 'eng': "is, there is, there are"}, 	
+    {'jap': 'アパート', 'eng': "apartment building, apartment, apartments"}, 	
+    {'jap': 'ひっこします', 'eng': "am going to move, is going to move, move"}, 	
+    {'jap': 'まだ', 'eng': "still, yet, too"}, 	
+    {'jap': 'ひろい', 'eng': "spacious"}, 	
+    {'jap': 'いえ', 'eng': "house"}, 
+];
+
+let gameCardsPt14 = [
+    {'jap': 'あれ', 'eng': "hey, that (one) (over there), what"}, 	
+    {'jap': '何ですか', 'eng': "what (is), what are, what's"}, 	
+    {'jap': 'おてら', 'eng': "temple"}, 	
+    {'jap': 'たてもの', 'eng': "building"}, 	
+    {'jap': 'な', 'eng': "do not, (adjective ending), don't"}, 	
+    {'jap': 'ところ', 'eng': "place"}, 	
+    {'jap': 'ほんとうに', 'eng': "really, truly"}, 	
+    {'jap': 'ながい', 'eng': "long"}, 	
+    {'jap': 'しゅうてん', 'eng': "final stop"}, 	
+    {'jap': '時間', 'eng': "time, hour, hours"}, 	
+    {'jap': '分', 'eng': "minute, minutes"}, 	
+    {'jap': 'ぐらい', 'eng': "about"}, 	
+    {'jap': 'かかります', 'eng': "take, (it) takes, (it) will take"}, 	
+    {'jap': 'はやい', 'eng': "fast"}, 	
+    {'jap': '十分', 'eng': "sufficient, enough, adequate"}, 	
+    {'jap': 'どの', 'eng': "any, each, which"}, 	
+    {'jap': 'もうすぐ', 'eng': "soon, almost, shortly"}, 	
+    {'jap': 'あさくさ', 'eng': "Asakusa"}, 	
+    {'jap': 'うえのこうえん', 'eng': "Ueno Park"}, 	
+    {'jap': '来ます', 'eng': "will be here, will come, is coming"}, 	
+    {'jap': 'つぎの', 'eng': "next"}, 	
+    {'jap': 'つぎ', 'eng': "next"}, 	
+    {'jap': 'よこはま', 'eng': "Yokohama"}, 	
+    {'jap': 'バス', 'eng': "bus"}, 	
+    {'jap': 'あきはばら', 'eng': "Akihabara"}, 	
+    {'jap': 'しぶや', 'eng': "Shibuya"}, 	
+    {'jap': '行きます', 'eng': "am going, are going, go"}, 	
+    {'jap': 'でんしゃ', 'eng': "train"}, 	
+    {'jap': 'こんしゅう', 'eng': "this week"}, 	
+    {'jap': 'いつ', 'eng': "when, what time"}, 
+];
+
+let gameCardsPt15 = [
+    {'jap': 'ちゃんと', 'eng': "proper, properly, full"},	
+    {'jap': 'くすりを飲みます', 'eng': "take"},	
+    {'jap': '休みます', 'eng': "rest, take a break, absent (from)"},	
+    {'jap': 'きょう', 'eng': "today"},	
+    {'jap': 'ちかく', 'eng': "nearby"},	
+    {'jap': 'ごかぞく', 'eng': "your family, family"},	
+    {'jap': 'アレルギー', 'eng': "allergy"},	
+    {'jap': 'ごりょうしん', 'eng': "(your) parents, parents"},	
+    {'jap': 'でんわばんごう', 'eng': "phone number"},	
+    {'jap': '何さい', 'eng': "how old"},	
+    {'jap': '〇', 'eng': "0, zero"},	
+    {'jap': '九', 'eng': "nine"},	
+    {'jap': 'きゅうきゅうしゃ', 'eng': "ambulance"},	
+    {'jap': 'おねがいします', 'eng': "please, I need ... please"},	
+    {'jap': 'びょういん', 'eng': "hospital"},	
+    {'jap': 'けいさつ', 'eng': "police"},	
+    {'jap': 'あぶない', 'eng': "dangerous"},	
+    {'jap': 'ぐあいがわるい', 'eng': "unwell"},	
+    {'jap': 'すわります', 'eng': "sit, going to sit"},	
+    {'jap': 'だいじょうぶ', 'eng': "OK"},	
+    {'jap': 'どうですか', 'eng': "how are things, why don't, how is"},	
+    {'jap': 'おみやげ', 'eng': "souvenir"},	
+    {'jap': 'おかし', 'eng': "snack"},	
+    {'jap': 'ポストカード', 'eng': "postcard"},	
+    {'jap': 'ふじさん', 'eng': "Mt. Fuji"},	
+    {'jap': '高い', 'eng': "tall"},	
+    {'jap': '山', 'eng': "mountain, mountains, mount"},	
+    {'jap': 'じんじゃ', 'eng': "shrine"},	
+    {'jap': 'ラーメンや', 'eng': "ramen shop"},	
+    {'jap': 'ピザや', 'eng': "pizza shop"},	
+    {'jap': 'はらじゅく', 'eng': "Harajuku"},	
+    {'jap': 'デザート', 'eng': "dessert"},
+];
+
+let gameCardsPt16 = [
+    
+];
+
+let gameCardsPt17 = [
+    
+];
+
+let gameCardsPt18 = [
+    
+];
+
+let gameCardsPt19 = [
+    
+];
+
+let gameCardsPt20 = [
+    
 ];
 
 let gameCards = []; // Stores selected categories
@@ -121,9 +575,21 @@ function updateSelectedCategories() {
         if (checkbox.value === "katakana9") selectedCategories.push(...gameCardsKatakana9);
         if (checkbox.value === "katakana10") selectedCategories.push(...gameCardsKatakana10);
         if (checkbox.value === "katakana11") selectedCategories.push(...gameCardsKatakana11);
-        if (checkbox.value === "greetings") selectedCategories.push(...gameCardsGreetings);
-        if (checkbox.value === "travel") selectedCategories.push(...gameCardsTravel);
-        if (checkbox.value === "emergency") selectedCategories.push(...gameCardsEmergency);
+        if (checkbox.value === "pt1") selectedCategories.push(...gameCardsPt1);
+        if (checkbox.value === "pt2") selectedCategories.push(...gameCardsPt2);
+        if (checkbox.value === "pt3") selectedCategories.push(...gameCardsPt3);
+        if (checkbox.value === "pt4") selectedCategories.push(...gameCardsPt4);
+        if (checkbox.value === "pt5") selectedCategories.push(...gameCardsPt5);
+        if (checkbox.value === "pt6") selectedCategories.push(...gameCardsPt6);
+        if (checkbox.value === "pt7") selectedCategories.push(...gameCardsPt7);
+        if (checkbox.value === "pt8") selectedCategories.push(...gameCardsPt8);
+        if (checkbox.value === "pt9") selectedCategories.push(...gameCardsPt9);
+        if (checkbox.value === "pt10") selectedCategories.push(...gameCardsPt10);
+        if (checkbox.value === "pt11") selectedCategories.push(...gameCardsPt11);
+        if (checkbox.value === "pt12") selectedCategories.push(...gameCardsPt12);
+        if (checkbox.value === "pt13") selectedCategories.push(...gameCardsPt13);
+        if (checkbox.value === "pt14") selectedCategories.push(...gameCardsPt14);
+        if (checkbox.value === "pt15") selectedCategories.push(...gameCardsPt15);
     });
 
     gameCards = selectedCategories.length > 0 ? selectedCategories : [
@@ -149,9 +615,21 @@ function updateSelectedCategories() {
         ...gameCardsKatakana9, 
         ...gameCardsKatakana10, 
         ...gameCardsKatakana11, 
-        ...gameCardsGreetings, 
-        ...gameCardsTravel, 
-        ...gameCardsEmergency
+        ...gameCardsPt1, 
+        ...gameCardsPt2, 
+        ...gameCardsPt3,
+        ...gameCardsPt4,
+        ...gameCardsPt5,
+        ...gameCardsPt6,
+        ...gameCardsPt7,
+        ...gameCardsPt8,
+        ...gameCardsPt9,
+        ...gameCardsPt10,
+        ...gameCardsPt11,
+        ...gameCardsPt12,
+        ...gameCardsPt13,
+        ...gameCardsPt14,
+        ...gameCardsPt15,
     ];
 }
 
