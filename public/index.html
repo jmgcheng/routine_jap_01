@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japanese Word Trainer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #japanese-word {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        #english-word {
+            font-size: 1.5em;
+            color: gray;
+            margin-top: 10px;
+            visibility: hidden;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        .category-group {
+            margin-top: 20px;
+        }
+        label {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Japanese Word Trainer</h2>
+
+    <div class="category-group">
+        <label><input type="checkbox" class="category" value="greetings" checked> Greetings</label>
+        <label><input type="checkbox" class="category" value="travel" checked> Travel</label>
+        <label><input type="checkbox" class="category" value="emergency" checked> Emergency</label>
+    </div>
+
+    <div>
+        <p id="japanese-word">Press the button to start!</p>
+        <p id="english-word"></p>
+        <button onclick="showRandomWord()">New Word</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
