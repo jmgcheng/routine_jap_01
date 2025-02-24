@@ -28,28 +28,31 @@ const katakanaDictionary = [
 ];
 
 // Sample Game Card Data
-let gameCardsHiragana1 = [
-    { 
-        "jap": "あ", 
-        "eng": "a" 
-    },
-    { 
-        "jap": "い", 
-        "eng": "i" 
-    },
-    { 
-        "jap": "う", 
-        "eng": "u" 
-    },
-    { 
-        "jap": "え", 
-        "eng": "e" 
-    },
-    { 
-        "jap": "お", 
-        "eng": "o" 
-    },
-];
+let gameCardsHiragana1 = [{'jap': 'あ', 'eng': 'a'}, {'jap': 'い', 'eng': 'i'}, {'jap': 'う', 'eng': 'u'}, {'jap': 'え', 'eng': 'e'}, {'jap': 'お', 'eng': 'o'}, ]
+let gameCardsHiragana2 = [{'jap': 'か', 'eng': 'ka'}, {'jap': 'き', 'eng': 'ki'}, {'jap': 'く', 'eng': 'ku'}, {'jap': 'け', 'eng': 'ke'}, {'jap': 'こ', 'eng': 'ko'}, ]
+let gameCardsHiragana3 = [{'jap': 'さ', 'eng': 'sa'}, {'jap': 'し', 'eng': 'shi'}, {'jap': 'す', 'eng': 'su'}, {'jap': 'せ', 'eng': 'se'}, {'jap': 'そ', 'eng': 'so'}, ]
+let gameCardsHiragana4 = [{'jap': 'た', 'eng': 'ta'}, {'jap': 'ち', 'eng': 'chi'}, {'jap': 'つ', 'eng': 'tsu'}, {'jap': 'て', 'eng': 'te'}, {'jap': 'と', 'eng': 'to'}, ]
+let gameCardsHiragana5 = [{'jap': 'な', 'eng': 'na'}, {'jap': 'に', 'eng': 'ni'}, {'jap': 'ぬ', 'eng': 'nu'}, {'jap': 'ね', 'eng': 'ne'}, {'jap': 'の', 'eng': 'no'}, ]
+let gameCardsHiragana6 = [{'jap': 'は', 'eng': 'ha'}, {'jap': 'ひ', 'eng': 'hi'}, {'jap': 'ふ', 'eng': 'fu'}, {'jap': 'へ', 'eng': 'he'}, {'jap': 'ほ', 'eng': 'ho'}, ]
+let gameCardsHiragana7 = [{'jap': 'ま', 'eng': 'ma'}, {'jap': 'み', 'eng': 'mi'}, {'jap': 'む', 'eng': 'mu'}, {'jap': 'め', 'eng': 'me'}, {'jap': 'も', 'eng': 'mo'}, ]
+let gameCardsHiragana8 = [{'jap': 'や', 'eng': 'ya'}, {'jap': 'ゆ', 'eng': 'yu'}, {'jap': 'よ', 'eng': 'yo'}, ]
+let gameCardsHiragana9 = [{'jap': 'ら', 'eng': 'ra'}, {'jap': 'り', 'eng': 'ri'}, {'jap': 'る', 'eng': 'ru'}, {'jap': 'れ', 'eng': 're'}, {'jap': 'ろ', 'eng': 'ro'}, ]
+let gameCardsHiragana10 = [{'jap': 'わ', 'eng': 'wa'}, {'jap': 'ゐ', 'eng': 'wi'}, {'jap': 'ゑ', 'eng': 'we'}, {'jap': 'を', 'eng': 'wo'},]
+let gameCardsHiragana11 = [{'jap': 'ん', 'eng': 'n'}]
+
+let gameCardsKatakana1 = [{'jap': 'ア', 'eng': 'a'}, 	{'jap': 'イ', 'eng': 'i'}, 	{'jap': 'ウ', 'eng': 'u'}, 		{'jap': 'エ', 'eng': 'e'}, 	{'jap': 'オ', 'eng': 'o'}, ]
+let gameCardsKatakana2 = [{'jap': 'カ', 'eng': 'ka'}, 	{'jap': 'キ', 'eng': 'ki'}, 	{'jap': 'ク', 'eng': 'ku'}, 		{'jap': 'ケ', 'eng': 'ke'}, 	{'jap': 'コ', 'eng': 'ko'}, ]
+let gameCardsKatakana3 = [{'jap': 'サ', 'eng': 'sa'}, 	{'jap': 'シ', 'eng': 'shi'}, {'jap': 'ス', 'eng': 'su'}, 		{'jap': 'セ', 'eng': 'se'}, 	{'jap': 'ソ', 'eng': 'so'}, ]
+let gameCardsKatakana4 = [{'jap': 'タ', 'eng': 'ta'}, 	{'jap': 'チ', 'eng': 'chi'}, {'jap': 'ツ', 'eng': 'tsu'}, 	{'jap': 'テ', 'eng': 'te'}, 	{'jap': 'ト', 'eng': 'to'}, ]
+let gameCardsKatakana5 = [{'jap': 'ナ', 'eng': 'na'}, 	{'jap': 'ニ', 'eng': 'ni'}, 	{'jap': 'ヌ', 'eng': 'nu'}, 		{'jap': 'ネ', 'eng': 'ne'}, 	{'jap': 'ノ', 'eng': 'no'}, ]
+let gameCardsKatakana6 = [{'jap': 'ハ', 'eng': 'ha'}, 	{'jap': 'ヒ', 'eng': 'hi'}, 	{'jap': 'フ', 'eng': 'fu'}, 		{'jap': 'ヘ', 'eng': 'he'}, 	{'jap': 'ホ', 'eng': 'ho'}, ]
+let gameCardsKatakana7 = [{'jap': 'マ', 'eng': 'ma'}, 	{'jap': 'ミ', 'eng': 'mi'}, 	{'jap': 'ム', 'eng': 'mu'}, 		{'jap': 'メ', 'eng': 'me'}, 	{'jap': 'モ', 'eng': 'mo'}, ]
+let gameCardsKatakana8 = [{'jap': 'ヤ', 'eng': 'ya'}, 	{'jap': 'ユ', 'eng': 'yu'}, 	{'jap': 'ヨ', 'eng': 'yo'}, ]
+let gameCardsKatakana9 = [{'jap': 'ラ', 'eng': 'ra'}, 	{'jap': 'リ', 'eng': 'ri'}, 	{'jap': 'ル', 'eng': 'ru'}, 		{'jap': 'レ', 'eng': 're'}, 	{'jap': 'ロ', 'eng': 'ro'}, ]
+let gameCardsKatakana10 = [{'jap': 'ワ', 'eng': 'wa'}, 	{'jap': 'ヲ', 'eng': 'wo'},]
+let gameCardsKatakana11 = [{'jap': 'ン', 'eng': 'n'}]
+
+
 let gameCardsGreetings = [
     { "jap": "こんにちは", "eng": "Hello" },
     { "jap": "さようなら", "eng": "Goodbye" }
@@ -97,12 +100,59 @@ function updateSelectedCategories() {
 
     checkboxes.forEach(checkbox => {
         if (checkbox.value === "hiragana1") selectedCategories.push(...gameCardsHiragana1);
+        if (checkbox.value === "hiragana2") selectedCategories.push(...gameCardsHiragana2);
+        if (checkbox.value === "hiragana3") selectedCategories.push(...gameCardsHiragana3);
+        if (checkbox.value === "hiragana4") selectedCategories.push(...gameCardsHiragana4);
+        if (checkbox.value === "hiragana5") selectedCategories.push(...gameCardsHiragana5);
+        if (checkbox.value === "hiragana6") selectedCategories.push(...gameCardsHiragana6);
+        if (checkbox.value === "hiragana7") selectedCategories.push(...gameCardsHiragana7);
+        if (checkbox.value === "hiragana8") selectedCategories.push(...gameCardsHiragana8);
+        if (checkbox.value === "hiragana9") selectedCategories.push(...gameCardsHiragana9);
+        if (checkbox.value === "hiragana10") selectedCategories.push(...gameCardsHiragana10);
+        if (checkbox.value === "hiragana11") selectedCategories.push(...gameCardsHiragana11);
+        if (checkbox.value === "katakana1") selectedCategories.push(...gameCardsKatakana1);
+        if (checkbox.value === "katakana2") selectedCategories.push(...gameCardsKatakana2);
+        if (checkbox.value === "katakana3") selectedCategories.push(...gameCardsKatakana3);
+        if (checkbox.value === "katakana4") selectedCategories.push(...gameCardsKatakana4);
+        if (checkbox.value === "katakana5") selectedCategories.push(...gameCardsKatakana5);
+        if (checkbox.value === "katakana6") selectedCategories.push(...gameCardsKatakana6);
+        if (checkbox.value === "katakana7") selectedCategories.push(...gameCardsKatakana7);
+        if (checkbox.value === "katakana8") selectedCategories.push(...gameCardsKatakana8);
+        if (checkbox.value === "katakana9") selectedCategories.push(...gameCardsKatakana9);
+        if (checkbox.value === "katakana10") selectedCategories.push(...gameCardsKatakana10);
+        if (checkbox.value === "katakana11") selectedCategories.push(...gameCardsKatakana11);
         if (checkbox.value === "greetings") selectedCategories.push(...gameCardsGreetings);
         if (checkbox.value === "travel") selectedCategories.push(...gameCardsTravel);
         if (checkbox.value === "emergency") selectedCategories.push(...gameCardsEmergency);
     });
 
-    gameCards = selectedCategories.length > 0 ? selectedCategories : [...gameCardsHiragana1, ...gameCardsGreetings, ...gameCardsTravel, ...gameCardsEmergency];
+    gameCards = selectedCategories.length > 0 ? selectedCategories : [
+        ...gameCardsHiragana1, 
+        ...gameCardsHiragana2, 
+        ...gameCardsHiragana3, 
+        ...gameCardsHiragana4, 
+        ...gameCardsHiragana5, 
+        ...gameCardsHiragana6, 
+        ...gameCardsHiragana7, 
+        ...gameCardsHiragana8, 
+        ...gameCardsHiragana9, 
+        ...gameCardsHiragana10, 
+        ...gameCardsHiragana11,
+        ...gameCardsKatakana1, 
+        ...gameCardsKatakana2, 
+        ...gameCardsKatakana3, 
+        ...gameCardsKatakana4, 
+        ...gameCardsKatakana5, 
+        ...gameCardsKatakana6, 
+        ...gameCardsKatakana7, 
+        ...gameCardsKatakana8, 
+        ...gameCardsKatakana9, 
+        ...gameCardsKatakana10, 
+        ...gameCardsKatakana11, 
+        ...gameCardsGreetings, 
+        ...gameCardsTravel, 
+        ...gameCardsEmergency
+    ];
 }
 
 // Function to show a random word
