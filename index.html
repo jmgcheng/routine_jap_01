@@ -14,6 +14,11 @@
             font-size: 2em;
             font-weight: bold;
         }
+        #romaji-word {
+            font-size: 1.5em;
+            color: darkblue;
+            margin-top: 10px;
+        }
         #english-word {
             font-size: 1.5em;
             color: gray;
@@ -38,13 +43,18 @@
     <h2>Japanese Word Trainer</h2>
 
     <div class="category-group">
-        <label><input type="checkbox" class="category" value="greetings" checked> Greetings</label>
-        <label><input type="checkbox" class="category" value="travel" checked> Travel</label>
-        <label><input type="checkbox" class="category" value="emergency" checked> Emergency</label>
+        <div id="group-label">
+            <label><input type="checkbox" class="category" value="hiragana1" checked> Hiragana 1</label>
+            <label><input type="checkbox" class="category" value="greetings" checked> Greetings</label>
+            <label><input type="checkbox" class="category" value="travel" checked> Travel</label>
+            <label><input type="checkbox" class="category" value="emergency" checked> Emergency</label>
+        </div>
+        <button onclick="toggleGroupMenu()">Categories</button>
     </div>
 
     <div>
         <p id="japanese-word">Press the button to start!</p>
+        <p id="romaji-word"></p>
         <p id="english-word"></p>
         <button onclick="showRandomWord()">New Word</button>
     </div>
